@@ -9,7 +9,7 @@
 <main class="z-10 fixed h-full w-full flex flex-col items-end justify-between p-8">
     <Icon />
 
-    <img src="23.png" alt="lmao" class="h-[140%] fixed left-8"/>
+    <img src="christ.png" alt="lmao" class="h-[140%] fixed left-8"/>
 
     <div>
         <Countdown />
