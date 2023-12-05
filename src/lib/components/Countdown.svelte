@@ -34,7 +34,6 @@
 
 <style>
     .time_container {
-        font-family: "Inter Tight";
         font-weight: bold;
     }
 </style>
