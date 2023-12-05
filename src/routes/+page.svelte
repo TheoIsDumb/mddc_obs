@@ -1,7 +1,6 @@
 <script>
-    import Icon from '$lib/Icon.svelte'
-    
-    let timeString = "17:30:00"
+    import Icon from '$lib/icons/Icon.svelte'
+    import Countdown from '$lib/components/Countdown.svelte';
 </script>
 
 <!-- svelte-ignore a11y-media-has-caption -->
@@ -9,5 +8,11 @@
 
 <main class="z-10 fixed h-full w-full flex flex-col items-end justify-between p-8">
     <Icon />
-    <h1 class="font-bold text-white">hello</h1>
+
+    <img src="23.png" alt="lmao" class="h-[140%] fixed left-8"/>
+
+    <div>
+        <Countdown />
+        <hr class="bg-white h-[1px] w-full"/>
+    </div>
 </main>
