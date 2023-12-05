@@ -1,10 +1,11 @@
 <script>
-	let value = new Date().toISOString().slice(0,10) + 'T23:30'
+    import { setTime } from '$lib/store'
 
 	let now = new Date()
 	setInterval(() => now = new Date(), 1000)
 	
-	$: result = new Date(value) - now
+	$: result = new Date($setTime) - now
+    $: console.log($setTime)
 
 	function timeconv(milliseconds) {
         let seconds = Math.floor(milliseconds / 1000);
@@ -21,8 +22,6 @@
         return number < 10 ? "0" + number : number;
     }
 </script>
-
-<!-- <input type="datetime-local" bind:value/> -->
 
 <div class="time_container text-white text-5xl flex flex-col items-end tracking-tight {result < 0 ? 'mb-4' : ''}">
     <span>The stream will begin {@html result > 0 ? "in: " : "soon."}</span>
