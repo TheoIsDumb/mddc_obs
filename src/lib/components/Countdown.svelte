@@ -1,11 +1,10 @@
 <script>
-    import { setTime } from '$lib/store'
+    import { streamTime } from '$lib/store'
 
 	let now = new Date()
 	setInterval(() => now = new Date(), 1000)
 	
-	$: result = new Date($setTime) - now
-    $: console.log($setTime)
+	$: result = new Date($streamTime) - now
 
 	function timeconv(milliseconds) {
         let seconds = Math.floor(milliseconds / 1000);
