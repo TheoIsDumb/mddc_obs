@@ -24,7 +24,7 @@
 
 <!-- <input type="datetime-local" bind:value/> -->
 
-<div class="time_container text-white text-5xl flex flex-col items-end tracking-tight">
+<div class="time_container text-white text-5xl flex flex-col items-end tracking-tight {result < 0 ? 'mb-4' : ''}">
     <span>The stream will begin {@html result > 0 ? "in: " : "soon."}</span>
 
     {#if result > 0}
