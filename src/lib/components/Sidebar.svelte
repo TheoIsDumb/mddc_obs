@@ -1,0 +1,1 @@
+<div class="sidebar h-full w-full fixed top-0 left-0 bg-black/40 z-20"></div>
