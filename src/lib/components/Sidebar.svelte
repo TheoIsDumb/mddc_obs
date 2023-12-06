@@ -40,7 +40,7 @@
         {/if}
 
         {#if $page.url.pathname === "/text"}
-            <div class="malayalamText">
+            <div class="preset mb-4">
                 <h1 class="font-bold text-xl mb-2">Text Presets</h1>
 
                 <div class="buttons flex flex-col items-center rounded border-white/50 border-2">
@@ -52,6 +52,13 @@
                         >{opt.id}</button>
                     {/each}
                 </div>
+            </div>
+
+            <div class="customText mb-4">
+                <h1 class="font-bold text-xl mb-2">Custom Text</h1>
+
+                <input type="text" bind:value={$malayalamText}
+                class="bg-transparent border-[1.5px] focus:border-blue-300 rounded w-full outline-none transition duration-300 px-3 py-2"/>
             </div>
         {/if}
 
