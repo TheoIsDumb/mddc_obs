@@ -4,11 +4,21 @@
   import { sidebarShown } from '$lib/store'
   import { fade } from "svelte/transition"
 
+  import Icon from '$lib/icons/Icon.svelte'
+  import LeftArrow from '$lib/icons/LeftArrow.svelte'
+
   export let data
 </script>
 
 <!-- svelte-ignore a11y-media-has-caption -->
 <video src="loop.webm" autoplay loop class="fixed object-cover top-0 left-0 h-full w-full"/>
+
+<div class="flex flex-col items-end gap-8 absolute right-8 top-8">
+    <Icon />
+    <button on:click={() => $sidebarShown = !$sidebarShown}>
+        <LeftArrow />
+    </button>
+</div>
 
 {#key data}
   <main class="z-10 fixed h-full w-full flex flex-col p-8" in:fade={{ delay: 300 }} out:fade>
