@@ -1,11 +1,8 @@
 <script>
-    import { sidebarShown, streamTime, malayalamText } from '$lib/store'
+    import { sidebarShown, streamTime, malayalamText, options } from '$lib/store'
     import Close from '$lib/icons/Close.svelte'
     import { fade, slide } from 'svelte/transition'
 
-    $: console.log($streamTime)
-
-    let options = { timeZone: "Asia/Kolkata", year: 'numeric', month: '2-digit', day: '2-digit' }
     let timesList = ["06:00:00 AM", "05:30:00 PM", "06:45:00 PM"]
 
     let malayalamTextOptions = [

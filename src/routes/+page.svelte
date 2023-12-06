@@ -1,5 +1,5 @@
 <script>
-    let list = ["Stream", "Malayalam"]
+    let list = ["Countdown", "Text"]
 </script>
 
 <div class="flex h-full w-full flex-col items-center justify-center">
