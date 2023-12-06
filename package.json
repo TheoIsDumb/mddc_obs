@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "vite --host -- dev",
-    "build": "vite --host -- build",
-    "preview": "vite preview"
+    "dev": "vite dev --host --open",
+    "build": "vite build",
+    "preview": "vite preview --host --open"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "^2.0.0",
