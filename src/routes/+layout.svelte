@@ -18,17 +18,17 @@
 <!-- svelte-ignore a11y-media-has-caption -->
 <video src="/loop.webm" autoplay loop class="fixed object-cover top-0 left-0 h-full w-full"/>
 
-<div class="z-20 absolute left-8 top-8">
-  <button class="inline-block" on:click={() => $sidebarShown = !$sidebarShown}>
-      <SidebarIcon />
-  </button>
-
   {#if $page.url.pathname !== "/"}
-    <a transition:fade class="inline-block ml-4" href="/">
-      <GoBack />
-    </a>
+    <div transition:fade class="z-20 absolute left-8 top-8">
+      <button class="inline-block" on:click={() => $sidebarShown = !$sidebarShown}>
+          <SidebarIcon />
+      </button>
+
+        <a class="inline-block ml-4" href="/">
+          <GoBack />
+        </a>
+    </div>
   {/if}
-</div>
 
 <div class="z-20 absolute right-8 top-8">
     <Icon />
