@@ -13,7 +13,7 @@
 <!-- svelte-ignore a11y-media-has-caption -->
 <video src="loop.webm" autoplay loop class="fixed object-cover top-0 left-0 h-full w-full"/>
 
-<div class="flex flex-col items-end gap-8 absolute right-8 top-8">
+<div class="flex flex-col z-20 items-end gap-8 absolute right-8 top-8">
     <Icon />
     <button on:click={() => $sidebarShown = !$sidebarShown}>
         <LeftArrow />

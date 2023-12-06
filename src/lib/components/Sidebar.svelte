@@ -9,7 +9,7 @@
     let timesList = ["06:00:00 AM", "05:30:00 PM", "06:45:00 PM"]
 </script>
 
-<div transition:fade class="sidebar h-full w-full fixed top-0 left-0 bg-black/40 text-white z-20">
+<div transition:fade class="sidebar h-full w-full fixed top-0 left-0 bg-black/40 text-white z-30">
     <div class="cont absolute left-0 top-0 p-8 h-full bg-zinc-950/80 flex flex-col">
         <button on:click={() => $sidebarShown = !$sidebarShown} class="mb-8">
             <Close />
