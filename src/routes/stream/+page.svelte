@@ -6,7 +6,7 @@
     import { sidebarShown } from '$lib/store'
 </script>
 
-<main class="z-10 fixed h-full w-full flex flex-col items-end justify-between p-8">
+<div class="flex h-full w-full flex-col items-end justify-between">
     <div class="flex flex-col items-end gap-8">
         <Icon />
         <button on:click={() => $sidebarShown = !$sidebarShown}>
@@ -21,4 +21,4 @@
         <div class="bg-white h-[2px] mt-[-0.5rem] w-full"/>
         <h6 class="font-bold text-right text-2xl text-white">Vettucaud Media Commission</h6>
     </div>
-</main>
+</div>
