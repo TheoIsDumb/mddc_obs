@@ -1,5 +1,6 @@
 <script>
     import { streamTime } from '$lib/store'
+    import "@fontsource/inter-tight/700.css"
 
 	let now = new Date()
 	setInterval(() => now = new Date(), 1000)
@@ -32,6 +33,6 @@
 
 <style>
     .time_container {
-        font-weight: bold;
+        font-weight: 700;
     }
 </style>

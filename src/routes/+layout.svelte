@@ -8,6 +8,8 @@
   import GoBack from '$lib/icons/GoBack.svelte'
   import SidebarIcon from '$lib/icons/SidebarIcon.svelte'
 
+  import "@fontsource/inter-tight"
+
   import { page } from '$app/stores'
 
   export let data
@@ -41,3 +43,9 @@
 {#if $sidebarShown}
   <Sidebar />
 {/if}
+
+<style>
+  :global(body) {
+    font-family: "Inter Tight", sans-serif;
+  }
+</style>
