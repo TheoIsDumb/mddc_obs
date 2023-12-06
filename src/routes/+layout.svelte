@@ -16,7 +16,7 @@
 </script>
 
 <!-- svelte-ignore a11y-media-has-caption -->
-<video src="loop.webm" autoplay loop class="fixed object-cover top-0 left-0 h-full w-full"/>
+<video src="/loop.webm" autoplay loop class="fixed object-cover top-0 left-0 h-full w-full"/>
 
 <div class="z-20 absolute left-8 top-8">
   <button class="inline-block" on:click={() => $sidebarShown = !$sidebarShown}>
