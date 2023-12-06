@@ -1,7 +1,7 @@
 <script>
     import { sidebarShown, streamTime } from '$lib/store'
     import Close from '$lib/icons/Close.svelte'
-    import { fade } from 'svelte/transition'
+    import { fade, slide } from 'svelte/transition'
 
     $: console.log($streamTime)
 
@@ -9,8 +9,8 @@
     let timesList = ["06:00:00 AM", "05:30:00 PM", "06:45:00 PM"]
 </script>
 
-<div transition:fade class="sidebar h-full w-full fixed top-0 left-0 bg-black/40 text-white z-30">
-    <div class="cont absolute left-0 top-0 p-8 h-full bg-zinc-950/80 flex flex-col">
+<div transition:fade class="sidebar h-full w-full fixed top-0 left-0 bg-zinc-950/60 text-white z-30">
+    <div in:slide={{ axis: 'x' }} out:slide={{ axis: 'x', duration: 100 }} class="cont absolute left-0 top-0 p-8 h-full bg-zinc-950/90 flex flex-col">
         <button on:click={() => $sidebarShown = !$sidebarShown} class="mb-8">
             <Close />
         </button>
