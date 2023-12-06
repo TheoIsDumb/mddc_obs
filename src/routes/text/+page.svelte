@@ -15,6 +15,6 @@
 
 <style>
     h1.text {
-        font-family: "Gayathri", sans-serif;
+        font-family: "Inter Tight", "Gayathri", sans-serif;
     }
 </style>
