@@ -5,7 +5,7 @@
   import { fade } from "svelte/transition"
 
   import Icon from '$lib/icons/Icon.svelte'
-  import LeftArrow from '$lib/icons/LeftArrow.svelte'
+  import SidebarIcon from '$lib/icons/SidebarIcon.svelte'
 
   export let data
 </script>
@@ -13,11 +13,14 @@
 <!-- svelte-ignore a11y-media-has-caption -->
 <video src="loop.webm" autoplay loop class="fixed object-cover top-0 left-0 h-full w-full"/>
 
-<div class="flex flex-col z-20 items-end gap-8 absolute right-8 top-8">
+<div class="z-20 absolute left-8 top-8">
+  <button on:click={() => $sidebarShown = !$sidebarShown}>
+      <SidebarIcon />
+  </button>
+</div>
+
+<div class="z-20 absolute right-8 top-8">
     <Icon />
-    <button on:click={() => $sidebarShown = !$sidebarShown}>
-        <LeftArrow />
-    </button>
 </div>
 
 {#key data}
