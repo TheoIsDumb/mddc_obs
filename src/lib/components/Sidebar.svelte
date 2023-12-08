@@ -68,3 +68,9 @@
         </span>
     </div>
 </div>
+
+<style>
+    .preset button, .customText {
+        font-family: "Inter Tight", "Gayathri", sans-serif;
+    }
+</style>
