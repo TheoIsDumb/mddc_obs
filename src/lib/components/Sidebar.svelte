@@ -9,6 +9,7 @@
     let malayalamTextOptions = [
         { id: "ദിവ്യബലി" , text: "ദിവ്യബലി <br /> ഉടൻ ആരംഭിക്കുന്നതാണ്." },
         { id: "പാദപൂജ" , text: "പാദപൂജ <br /> ഉടൻ ആരംഭിക്കുന്നതാണ്." },
+        { id: "Holy Mass" , text: "The Holy Mass <br /> will commence soon." },
     ]
 </script>
 
