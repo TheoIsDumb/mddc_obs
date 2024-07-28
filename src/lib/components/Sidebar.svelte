@@ -1,6 +1,5 @@
 <script>
     import { sidebarShown, streamTime, malayalamText, options } from '$lib/store'
-    import Close from '$lib/icons/Close.svelte'
     import { fade, slide } from 'svelte/transition'
     import { page } from '$app/stores'
 
@@ -12,14 +11,16 @@
         { id: "കുരിശിന്റെ വഴി" , text: "കുരിശിന്റെ വഴി <br /> ഉടൻ ആരംഭിക്കുന്നതാണ്." },
         { id: "Holy Mass" , text: "The Holy Mass <br /> will commence soon." },
     ]
+
+    function toggle() {
+        $sidebarShown = !$sidebarShown
+    }
 </script>
 
-<div transition:fade class="sidebar h-full w-full fixed top-0 left-0 bg-zinc-950/60 text-white z-30">
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<div transition:fade on:click|self={toggle} class="sidebar h-full w-full fixed top-0 left-0 bg-zinc-950/60 text-white z-30">
     <div in:slide={{ axis: 'x' }} out:fade class="cont absolute left-0 top-0 p-8 h-full w-1/5 bg-zinc-950/90 flex flex-col">
-        <button on:click={() => $sidebarShown = !$sidebarShown} class="mb-8">
-            <Close />
-        </button>
-
         {#if $page.url.pathname === "/countdown"}
             <div class="choose mb-4">
                 <h1 class="font-bold text-xl mb-2">Choose Stream Time</h1>
