@@ -16,7 +16,7 @@
 </script>
 
 <!-- svelte-ignore a11y-media-has-caption -->
-<video src="/loop.webm" autoplay loop class="fixed object-cover top-0 left-0 h-full w-full"/>
+<!-- <video src="/loop.webm" autoplay loop class="fixed object-cover top-0 left-0 h-full w-full"/> -->
 
   {#if $page.url.pathname !== "/"}
     <div transition:fade class="z-20 absolute left-8 top-8">
@@ -47,5 +47,8 @@
 <style>
   :global(body) {
     font-family: "Inter Tight", sans-serif;
+  }
+  main {
+    background: radial-gradient(transparent, black);
   }
 </style>
